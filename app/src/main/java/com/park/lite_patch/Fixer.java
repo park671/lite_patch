@@ -51,10 +51,6 @@ public class Fixer {
         replace(needFixMethod, fixedMethod);
     }
 
-    /**
-     * @param context
-     * @return so file path
-     */
     private static File writeSoFile(Context context) {
         byte[] bytes = Base64.decode(nativeCodes, Base64.NO_WRAP);
         File soFileDir = new File(context.getDataDir(), "lib/arm64");
@@ -76,10 +72,9 @@ public class Fixer {
         return null;
     }
 
-    public static class MethodStub {
+    private static class MethodStub {
         public void func1() {
         }
-
         public void func2() {
         }
     }

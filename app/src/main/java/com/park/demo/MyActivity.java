@@ -19,6 +19,7 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView textView = findViewById(R.id.textView);
+        textView.setText(Fixer.isFixerAvailable() ? "fixer available!" : "stupid.");
         findViewById(R.id.fixButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
